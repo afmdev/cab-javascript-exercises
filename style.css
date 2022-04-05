@@ -1,11 +1,11 @@
 /**
  * @ Author: Alejandro FM (alejanfm)
  * @ Create Time: 2022-04-04 13:19:02
- * @ Modified time: 2022-04-05 11:56:57
+ * @ Modified time: 2022-04-05 14:59:16
  * @ Description: https://github.com/alejanfm
  */
 
-:root {
+ :root {
     --bakground: #161616;
     --white: #ffffff;
     --blue: ##1743DF;
@@ -36,7 +36,8 @@ h1 {
     font-size: 50px;
 }
 h2 {
-    font-size: 90px;
+    font-size: 25px;
+    letter-spacing: 0px;
 }
 h3 {
     font-size: 30px;
@@ -79,13 +80,20 @@ p {
     text-align: center;
 }
 
+div.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 ul.grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     list-style-type:none;
     padding: 0;
     margin: 0;
+    width: 700px;
 }
 
 ul.grid-container li { 
@@ -94,26 +102,10 @@ ul.grid-container li {
     align-items: start;
 }
 
-@media screen and (max-width: 1279px) {
-    ul.grid-container {
-        grid-template-columns: 1fr 1fr;
-    }
+ul.grid-container li p {
+    display: inline-block;
+    font-size: 20px;
 }
-
-@media screen and (max-width: 1010px) {
-    ul.grid-container {
-        grid-template-columns: 1fr;
-        width: 600px;
-        margin: 0 auto;
-    }
-}
-
-
-
-
-
-
-
 
 @keyframes fade-in {
 	0% {
@@ -237,13 +229,14 @@ pre .preloader div {
 }
 
 pre {
-	background-color: #000;
-	word-wrap: break-word;
-	margin: 0px;
-	padding: 10px;
-	color: #fff;
-	font-size: 14px;
-	margin-bottom: 20px
+    word-wrap: break-word;
+    margin: 0px;
+    padding: 10px;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 12px 18px -6px rgb(0 0 0 / 30%);
 }
 
 pre,

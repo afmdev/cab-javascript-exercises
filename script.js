@@ -126,12 +126,12 @@
 // }
 
 
-// let quokkas = ["Angelina", "Arno", "Jess", "Karolina", "John", "Marta", "Ale"]
-// let sizeQuokkas = quokkas.length
+let quokkas = ["Angelina", "Arno", "Jess", "Karolina", "John", "Marta", "Ale"]
+let sizeQuokkas = quokkas.length
 
-// for (let i = 0; i < sizeQuokkas; i = i + 1) {
-//     console.log("For " + quokkas[i] + ",aaaaaaaaa" + " the position is " + i)
-// }
+for (let i = 0; i < sizeQuokkas; i = i + 1) {
+    console.log("For " + quokkas[i] + ",aaaaaaaaa" + " the position is " + i)
+}
 
 
 // // WHILE LOOP

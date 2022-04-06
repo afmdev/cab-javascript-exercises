@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./rainbow-custom.min.js"></script>
-    <title>JS-Exercises : CABerlin</title>
-</head>
-<body>
-    <main>
-        <div class="top-container">
-            <div class="logo"></div>
-            <div class="bar"></div>
-            <div class="title">
-                <h1>JS-Exercises</h1>
-            </div>
-            <div class="bar"></div>
-            <div class="flex-container">
-                <h2>Writing expressions with variables</h2>
-                <ul class="grid-container">
-                    <li>
-                        <p>1 : I'm <span id="myName"></span></p>
-                        <pre><code data-language="javascript">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./style.css">
+		<script src="./rainbow-custom.min.js"></script>
+		<title>JS-Exercises : CABerlin</title>
+	</head>
+	<body>
+		<main>
+			<div class="top-container">
+				<div class="logo"></div>
+				<div class="bar"></div>
+				<div class="title">
+					<h1>JS-Exercises</h1>
+				</div>
+				<div class="bar"></div>
+				<div class="flex-container">
+					<h2>Writing expressions with variables</h2>
+					<ul class="grid-container">
+						<li>
+							<p>1 : I'm <span id="myName"></span></p>
+							<pre><code data-language="javascript">
 let myName = "Ale"
 document.getElementById("myName").innerHTML=myName;
-console.log("myName");
+console.log(myName);
                         </code></pre>
-                        <pre><code data-language="html">
-    <p>I'm <span id="myName"></span></p>
+							<pre><code data-language="html">
+<p>I'm <span id="myName"></span></p>
                         </code></pre>
-                    </li>
-
-                    <li>
-                        <p>2 : My age is <span id="age"></span></p>
-                        <pre><code data-language="javascript">
+						</li>
+						<li>
+							<p>2 : My age is <span id="age"></span></p>
+							<pre><code data-language="javascript">
 let age = 36;
 document.getElementById("age").innerHTML=age;
-console.log("age");
+console.log(age);
                         </code></pre>
-                        <pre><code data-language="html">
+							<pre><code data-language="html">
 <p>My age is <span id="age"></span></p>
                         </code></pre>
-                    </li>
-
-                    <li>
-                        <p>3 : Age diff <span id="ageDiff"></span></p>
-                        <pre><code data-language="javascript">
+						</li>
+						<li>
+							<p>3 : Age diff <span id="ageDiff"></span></p>
+							<pre><code data-language="javascript">
 let juliaAge = 32;
 let ageDiff = juliaAge - age;
 document.getElementById("ageDiff").innerHTML=ageDiff;
-console.log("ageDiff");
+console.log(ageDiff);
                         </code></pre>
-                        <pre><code data-language="html">
+							<pre><code data-language="html">
 <p>Age diff <span id="ageDiff"></span></p>
                         </code></pre>
-                    </li>
-                </ul>
-                </div>
-                <div class="flex-container">
-                    <h2>Writing code with conditionals</h2>
-                    <ul class="grid-container">
-
-                    <li>
-                        <p>4 : You are <span id="number21"></span></p>
-                        <pre><code data-language="javascript">
+						</li>
+					</ul>
+				</div>
+				<div class="flex-container">
+					<h2>Writing code with conditionals</h2>
+					<ul class="grid-container">
+						<li>
+							<p>4 : You are <span id="number21"></span></p>
+							<pre><code data-language="javascript">
 let number21 = 21;
 if (age > number21) {
     document.getElementById("number21").innerHTML="older than "+number21;
@@ -77,23 +74,86 @@ if (age > number21) {
     console.log("You are not older than "+number21);
 }
                         </code></pre>
-                        <pre><code data-language="html">
+							<pre><code data-language="html">
 <p>You are <span id="number21"></span></p>  
-                        </code></pre>
-                    </li>
-                    <li><pre><code data-language="javascript"></code></pre></li>
-                    <li><pre><code data-language="javascript"></code></pre></li>
-                    <li><pre><code data-language="javascript"></code></pre></li>
-                    <li><pre><code data-language="javascript"></code></pre></li>
-                    <li><pre><code data-language="javascript"></code></pre></li>
-                    <li><pre><code data-language="javascript"></code></pre></li>
-                    <li><pre><code data-language="javascript"></code></pre></li>
-                    <li><pre><code data-language="javascript"></code></pre></li>
-                    <li><pre><code data-language="javascript"></code></pre></li>
-                </ul>
-            </div>
-        </div>
-    </main>
-    <script src="./main.js"></script>
-</body>
+                            </code></pre>
+						</li>
+						<li>
+							<p>5 : <span id="compareJulia"></span></p>
+							<pre><code data-language="javascript">
+if (juliaAge == age) {
+    document.getElementById("compareJulia").innerHTML="You have the same age as Julia"
+    console.log("You have the same age as Julia");
+} else if (juliaAge > age) {
+    document.getElementById("compareJulia").innerHTML="Julia is older than you"
+    console.log("Julia is older than you");
+} else if (juliaAge < age ) {
+    document.getElementById("compareJulia").innerHTML="Julia is younger than you"
+    console.log("Julia is younger than you");
+}
+                            </code></pre>
+							<pre><code data-language="html">
+<p><span id="compareJulia"></span></p>  
+                            </code></pre>
+						</li>
+					</ul>
+				</div>
+
+                <div class="flex-container">
+					<h2>Sorting an Array</h2>
+					<ul class="grid-container">
+						<li>
+							<p>1 : You are <span id="number21"></span></p>
+							<pre><code data-language="javascript">
+const quokkas = [
+    "Alejandro",
+    "Jess",
+    "Arno", 
+    "John", 
+    "Marta",  
+    "Karolina", 
+    "Angelina",
+    "Raul",
+    "Ottavia"
+]
+let sizeQuokkas = quokkas.length;
+
+//Sort the array alphabetically and reverse
+console.log(quokkas.sort());
+//console.log(quokkas.reverse());
+
+//Print the first element of the array in the console
+console.log(quokkas[0]);
+
+//Print the last element of the array in the console.
+let lastQuokkas = quokkas.at(-1)
+console.log(lastQuokkas);
+console.log(quokkas.slice(-1));
+
+//Print all the elements of the array in the console (use a "for" loop)
+for (let i = 0; i < quokkas.length; i++) {
+    console.log(quokkas[i]);
+}
+
+for (let a of quokkas) {
+    console.log(a);
+}
+                            </code></pre>
+							<pre><code data-language="html">
+<p>You are <span id="number21"></span></p>  
+                            </code></pre>
+						</li>
+						<li>
+							<p>2 : <span id="compareJulia"></span></p>
+							<pre><code data-language="javascript"></code></pre>
+							<pre><code data-language="html">
+<p><span id="compareJulia"></span></p>  
+                            </code></pre>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<script src="./main.js"></script>
+	</body>
 </html>

@@ -1,7 +1,7 @@
 /** 
  * @ Author: Alejandro FM (alejanfm)
  * @ Create Time: 2022-04-04 13:19:02
- * @ Modified time: 2022-04-06 17:50:51
+ * @ Modified time: 2022-04-06 20:40:02
  * @ Description: https://github.com/alejanfm
  */
 
@@ -205,8 +205,8 @@ valuePosition(myArr2, index);
 
 var myArr3 = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];
 
-function repeatedNumber(p1) {
-    console.log("There is a clone: " +p1);
+function repeatedNumber(p) {
+    console.log("There is a clone: " +p);
 }
 repeatedNumber(myArr2, index);
 
@@ -217,10 +217,46 @@ repeatedNumber(myArr2, index);
 
 let myColor = ["Red", "Green", "White", "Black"];
 
-function fromArrayToString(p1) {
+function fromArrayToString(p) {
     let colors = myColor.toString();
     console.log(" "+colors);
 }
 fromArrayToString(myColor);
 
 
+//TODO JavaScript String:
+
+//? EXERCISE 1
+//* Write a JavaScript function that reverses a number. For example, if x = 32443 then the output should be 34423. Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.
+
+let initialNum = 32443; 
+
+function toReverse(p) {
+
+    //! Convert the numbers into a String
+    let stringNum = initialNum.toString();
+    console.log("Converted to String: " +stringNum);
+
+    //! Convert the numbers into an Array
+    let arrayNum = stringNum.split('');
+    console.log("Converted to an Array: " +arrayNum);
+
+    //! Reverse the number of the Array
+    let reverseNum = arrayNum.reverse();
+    console.log("Inverted Array: " +reverseNum);
+
+    //! Reassembles the reversed characters into a String
+    let finalNum = reverseNum.join('')
+    console.log("Final reversed String: " +finalNum);
+
+    //! All in one line 
+    let allInOne = 123456789;
+    let result = allInOne.toString().split('').reverse().join('')
+    console.log("All in one line: " +result);
+}
+
+toReverse(initialNum);
+
+
+//? EXERCISE 2
+//* Write a JavaScript function that returns a string in alphabetical order. For example, if x = 'webmaster' then the output should be 'abeemrstw'. Punctuation and numbers aren't passed in the string. Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.

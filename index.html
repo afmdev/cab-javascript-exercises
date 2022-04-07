@@ -22,13 +22,14 @@
 				<div class="bar"></div>
 				<div class="flex-container">
 					<h2>Writing expressions with variables</h2>
+                    <div class="bar"></div>
 					<ul class="grid-container">
 						<li>
 							<p>1 : I'm <span id="myName"></span></p>
 							<pre><code data-language="javascript">
-let myName = "Ale"
-document.getElementById("myName").innerHTML=myName;
-console.log(myName);
+let myName = "Ale";
+document.getElementById("myName").innerHTML = myName;
+console.log("Ex 1: "+myName);
                         </code></pre>
 							<pre><code data-language="html">
 <p>I'm <span id="myName"></span></p>
@@ -38,8 +39,8 @@ console.log(myName);
 							<p>2 : My age is <span id="age"></span></p>
 							<pre><code data-language="javascript">
 let age = 36;
-document.getElementById("age").innerHTML=age;
-console.log(age);
+document.getElementById("age").innerHTML = age;
+console.log("Ex 2: "+age);
                         </code></pre>
 							<pre><code data-language="html">
 <p>My age is <span id="age"></span></p>
@@ -48,10 +49,10 @@ console.log(age);
 						<li>
 							<p>3 : Age diff <span id="ageDiff"></span></p>
 							<pre><code data-language="javascript">
-let juliaAge = 32;
+let juliaAge = 1;
 let ageDiff = juliaAge - age;
 document.getElementById("ageDiff").innerHTML=ageDiff;
-console.log(ageDiff);
+console.log("Ex 3: "+ageDiff);
                         </code></pre>
 							<pre><code data-language="html">
 <p>Age diff <span id="ageDiff"></span></p>
@@ -60,7 +61,9 @@ console.log(ageDiff);
 					</ul>
 				</div>
 				<div class="flex-container">
+                    <div class="bar"></div>
 					<h2>Writing code with conditionals</h2>
+                    <div class="bar"></div>
 					<ul class="grid-container">
 						<li>
 							<p>4 : You are <span id="number21"></span></p>
@@ -68,10 +71,10 @@ console.log(ageDiff);
 let number21 = 21;
 if (age > number21) {
     document.getElementById("number21").innerHTML="older than "+number21;
-    console.log("You are older than "+number21);
+    console.log("Ex 4: You are older than "+number21);
 } else {
-    document.getElementById("number21").innerHTML="not older than "+number21;
-    console.log("You are not older than "+number21);
+    document.getElementById("number21").innerHTML="not older than "+ number21;
+    console.log("Ex 4: You are not older than "+number21);
 }
                         </code></pre>
 							<pre><code data-language="html">
@@ -83,13 +86,13 @@ if (age > number21) {
 							<pre><code data-language="javascript">
 if (juliaAge == age) {
     document.getElementById("compareJulia").innerHTML="You have the same age as Julia"
-    console.log("You have the same age as Julia");
+    console.log("Ex 5: You have the same age as Julia");
 } else if (juliaAge > age) {
     document.getElementById("compareJulia").innerHTML="Julia is older than you"
-    console.log("Julia is older than you");
+    console.log("Ex 5: Julia is older than you");
 } else if (juliaAge < age ) {
     document.getElementById("compareJulia").innerHTML="Julia is younger than you"
-    console.log("Julia is younger than you");
+    console.log("Ex 5: Julia is younger than you");
 }
                             </code></pre>
 							<pre><code data-language="html">
@@ -100,10 +103,16 @@ if (juliaAge == age) {
 				</div>
 
                 <div class="flex-container">
+                    <div class="bar"></div>
 					<h2>Sorting an Array</h2>
+                    <div class="bar"></div>
 					<ul class="grid-container">
 						<li>
-							<p>1 : You are <span id="number21"></span></p>
+							<p>1 : Alphabetically: <span id="sortArr1"></span></p>
+							<p>1 : First element: <span id="sortArr2"></span></p>
+							<p>1 : Last using .at(-1): <span id="sortArr3"></span></p>
+							<p>1 : Last using .slice(-1): <span id="sortArr4"></span></p>
+							<p>1 : For loop: <span id="sortArr5"></span></p>
 							<pre><code data-language="javascript">
 const quokkas = [
     "Alejandro",
@@ -119,24 +128,26 @@ const quokkas = [
 let sizeQuokkas = quokkas.length;
 
 //Sort the array alphabetically and reverse
-console.log(quokkas.sort());
+console.log("+ Alphabetically: "+quokkas.sort());
+document.getElementById("sortArr1").innerHTML=quokkas;
 //console.log(quokkas.reverse());
 
 //Print the first element of the array in the console
-console.log(quokkas[0]);
+console.log("+ First element: "+quokkas[0]);
+document.getElementById("sortArr2").innerHTML=quokkas[0];
 
 //Print the last element of the array in the console.
 let lastQuokkas = quokkas.at(-1)
-console.log(lastQuokkas);
-console.log(quokkas.slice(-1));
+console.log("+ Last using .at(-1): "+lastQuokkas);
+document.getElementById("sortArr3").innerHTML=lastQuokkas;
+console.log("+ Last using .slice(-1): "+quokkas.slice(-1));
+document.getElementById("sortArr4").innerHTML=quokkas.slice(-1);
 
 //Print all the elements of the array in the console (use a "for" loop)
+console.log("-------------------");
 for (let i = 0; i < quokkas.length; i++) {
-    console.log(quokkas[i]);
-}
-
-for (let a of quokkas) {
-    console.log(a);
+    console.log("+ Print all with for loop (Pos "+i+"): "+quokkas[i]);
+    document.getElementById("sortArr5").innerHTML=quokkas.slice(-1);
 }
                             </code></pre>
 							<pre><code data-language="html">
@@ -153,6 +164,26 @@ for (let a of quokkas) {
 					</ul>
 				</div>
 			</div>
+            
+            
+            <h2>My Favorite Bands</h2>
+            <ul id="band-list"></ul>
+            <style>
+                table {width: 500px; margin: 0 auto;}
+                table, td {
+                  border: 1px solid black;
+                  font-size: 10px;
+                  padding: 5px;
+                  background:white;
+                  color: black;
+                }
+                </style>
+            <h2>My Multi Table</h2>
+
+            <table id="myTable">
+
+             </table>
+
 		</main>
 		<script src="./main.js"></script>
 	</body>

@@ -1,7 +1,7 @@
 /** 
  * @ Author: Alejandro FM (alejanfm)
  * @ Create Time: 2022-04-04 13:19:02
- * @ Modified time: 2022-04-07 14:27:46
+ * @ Modified time: 2022-04-07 16:00:05
  * @ Description: https://github.com/alejanfm
  */
 
@@ -195,8 +195,11 @@ let myArr = [99,-4,48,67,294,-99,0,32,-1]
 
 function theLowest(parameter) {
     console.log("Ex 3: Unsorted: "+parameter);
+
     parameter.sort(function(a,b) { return a - b } );
+
     console.log("Ex 3: Sorted: "+parameter);
+    
     let min = 0;
     let max = parameter.length-1;
     console.log("Ex 3: The lowest: "+parameter[min]);
@@ -227,6 +230,7 @@ function repeatedNumber(p) {
 }
 
 repeatedNumber(myArr3);
+
 
 
 
@@ -319,12 +323,15 @@ firstLetterUppercase(myPrince)
 
 //? EXERCISE 4
 console.log("\r\n//* Write a JavaScript function that finds the longest word in a phrase. For example, if x = 'Web Development Tutorial', then the output should be 'Development'. Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.\r\n\r\n");
-let myWeb = "Web Development Tutorial"; 
+
+let myWeb = "Web Development Tutorial Chechelovepemttitu"; 
 
 function myBiggestWord(parameter) {
 
     let myBiggest = parameter.split(" ");
+    console.log(myBiggest);
     let myBiggestSorted = myBiggest.sort();
+    console.log(myBiggest);
     let firstPos = 0;
     console.log("Ex 3: "+myBiggestSorted[firstPos]);
 }
@@ -372,7 +379,7 @@ function addMultTable(cells, rows) {
         var row = header.insertRow(0);
         for (let index = 0; index < rows; index++) {
             var cell = row.insertCell(0);
-            cell.innerHTML = "<th>Head</th>";
+            cell.innerHTML = "Head";
         }
     }
 

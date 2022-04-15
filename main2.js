@@ -208,12 +208,13 @@ console.log(reverseNumber(number));
 let myWord = 'webmaster'
 
 function reverseNumber(parameter) {
-    output = []
-    sNumber = parameter.toString();
-    for (var g = 0; g < sNumber.length; g += 1) {
-        output.push(sNumber.charAt(g));
+    output2 = []
+    myReverse = parameter.toString();
+    for (var g = 0; g < myReverse.length; g++) {
+        output2.push(myReverse.charAt(g));
     }
-    return output.reverse();
+    myReverse  = output2.reverse().toString();
+    return  myReverse
 }
 console.log(reverseNumber(myWord)); 
 

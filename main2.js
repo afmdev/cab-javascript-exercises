@@ -137,20 +137,22 @@ console.log(arrayPosition(array, index)); // imprimo la función y pasando un ar
 // Write a function that receives an array and only prints the values that repeat.For example, given the following array and index, the function will print '6,23,33,100'.var array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];Save the changes to your JavaScript file. Reload the HTML page in your browser. You should see an array of the repeated numbers printed in the console. If not, investigate and fix it.Tip: this is considered by many students the most difficult exercise, therefore dedicate max. an hour to find a solution and if you can't leave it for tomorrow. Most of the time we need to take breaks and we will be able to see problems from different angles with a fresh mind.
 
 
-let numberList = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]
+var numberList = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]
 
 function repeatedNumb(array) {
-    let repeatedValue = [];
-    for (let i = 0; i < array.length; i++) {
-        for (let x = i + 1; x < array.length; x++) {
-            if (array[i] == array[x]) {
-                repeatedValue.push(array[i]);
+    let repeatedValue = []; // nuevo array vacio
+    for (let i = 0; i < array.length; i++) { //recorro el bucle
+        for (let x = i + 1; x < array.length; x++) { // recorro el bucle +1 para comparar un número y otro
+            if (array[i] == array[x]) { //una condición de que si el 
+                repeatedValue.push(array[i]); //con push() voy añadiendo 
             }
         }
     }
     return repeatedValue;
 }
 console.log(repeatedNumb(numberList));
+
+
 
 
 // Exercise 7
@@ -176,10 +178,10 @@ function arrayToString(array) {
     let theString = "";
     let theString2 = "";
     for (let i = 0; array.length > i; i++) {
-        theString += array[i] + ", "; // uso el += de addición al contenido existente en la variable
-        theString2 = array.join(", ");
+        // theString += array[i] + ", "; // uso el += de addición al contenido existente en la variable (así añade una coma al final)
+        theString2 = array.join(", "); // con join añadimos una coma a cada elemento pero no añade coma al final
     }
-    console.log(theString);
+    // console.log(theString);
     console.log(theString2);
 }
 arrayToString(myColor);
@@ -194,11 +196,13 @@ var number = 123456789
 function reverseNumber(parameter) {
     output = []
     sNumber = parameter.toString();
-    for (var g = 0; g < sNumber.length; g++) {
-        output.push(+sNumber.charAt(g));
-        output.push(sNumber.charAt(g));
+    for (var i = 0; i < sNumber.length; i++) {
+        // output.push(+sNumber.charAt(i))
+        output.push(sNumber.charAt(i));
     }
-    return output.reverse();
+    parameter = output.reverse()
+    let final = parameter.join("")
+    return  final
 }
 console.log(reverseNumber(number)); 
 
@@ -207,15 +211,86 @@ console.log(reverseNumber(number));
 
 let myWord = 'webmaster'
 
-function reverseNumber(parameter) {
-    output2 = []
+function reverseWord(parameter) {
+    let output2 = []
     myReverse = parameter.toString();
-    for (var g = 0; g < myReverse.length; g++) {
-        output2.push(myReverse.charAt(g));
+    for (var i = 0; i < parameter.length; i++) {
+        output2.push(parameter.charAt(i));
     }
-    myReverse  = output2.reverse().toString();
-    return  myReverse
+    // myReverse = output2.reverse().toString(); 
+    parameter = output2.reverse()
+    let final = parameter.join("")
+    return  final
 }
-console.log(reverseNumber(myWord)); 
+console.log(reverseWord(myWord)); 
 
 
+
+let thePrince = "prince of persia"
+
+function prince(parameter) {
+    let output = []
+    let first = []
+
+    for (var i = 0; i < parameter.length; i++) {
+    }
+
+}
+prince(thePrince)
+
+
+
+// let thePrince = "prince of persia"
+
+// function prince(parameter) {
+//     let output = []
+//     let first = []
+//     let counter = 0;
+//     for (let i = 0; i < parameter.length; i++) {
+//         if (parameter[i] == "' '") {
+//                 console.log("PASAAAAAAAAAAAAAA");
+//             } else {
+//                 console.log("NO PASA");
+//             }
+//         output.push(parameter.charAt(i))
+//         console.log(output);
+//         first = parameter[0].toUpperCase();
+//         console.log(first);
+//         output[0] = first
+        
+
+//         // console.log(output[i]);
+//         // b++
+//         console.log(counter);
+//     }
+//     // console.log(first);
+//     console.log(output);
+
+// }
+
+// prince(thePrince)
+
+
+
+
+            // if (parameter[i] == " ") {
+            //     // console.log("PASA");
+            //     first = parameter[i].toUpperCase();
+            //     console.log("soy i " +i);
+            //     // console.log("B "+b);
+            //     console.log("soyi " +i);
+            //     let c = b
+            //     console.log("B "+b);
+            //     console.log("C " + c);
+
+            //     parameter[c] = "Z"
+
+            
+            //     // b++
+            //     // output[i] = first
+            //     // console.log(output[b]);
+                
+                
+            // } else {
+            //     // console.log("NO PASA");" "
+            // }

@@ -58,9 +58,6 @@ for (let i = 0; i < family.length; i++) {
 	console.log("6 Loop " + i + ": " + family[i])
 }
 
-
-
-//Create an array with all the ages of the students in your class. Iterate the array using a while loop, and then print every age in the console.Add a conditional inside the while loop to only print even numbers.Write another a loop, but use a "for" loop instead of a "while" loop.Save your changes to your JavaScript file.Reload the HTML page in your browser.You should see every age printed, then only the even numbers printed.If not, investigate and fix it.
 //7
 let ages = [45, 34, 12, 89, 47, 71]
 
@@ -103,3 +100,35 @@ function lowNum(array) {
 	return myLow
 }
 console.log(lowNum(myArray))
+
+
+//9
+function highNum(array) {
+	let myHigh = array[0]
+	for (let i = 0; i < array.length; i++) {
+		if (array[i] > myHigh) {
+			myHigh = array[i]
+		}
+	}
+	return myHigh
+}
+console.log(highNum(myArray))
+
+
+//9
+var numArray = [3, 6, 67, 6, 23, 11, 100, 8, 93, 0, 17, 24, 7, 1, 33, 45, 28, 33, 23, 12, 99, 100]
+var index = 1
+
+function myIndex(array, parameter) {
+	for (let i = 0; i < array.length; i++) {
+		if (parameter == i) {
+			return array[i]
+		} else if (parameter > array.length - 1) {
+			console.log("Ese index no existe manito")
+		}
+	}
+}
+console.log(myIndex(numArray, 21))
+
+
+

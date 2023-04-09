@@ -55,6 +55,37 @@ document.getElementById("lastElement").innerHTML = "Last element array: " + fami
 for (let i = 0; i < family.length; i++) {
 	document.getElementById("loopElements").innerHTML = i + " " + family[i]
 	// document.getElementById("loopElements").innerHTML = family.slice(-1);
-	console.log("6 Loop: " + family[i])
+	console.log("6 Loop " + i + ": " + family[i])
+}
+
+
+
+//Create an array with all the ages of the students in your class. Iterate the array using a while loop, and then print every age in the console.Add a conditional inside the while loop to only print even numbers.Write another a loop, but use a "for" loop instead of a "while" loop.Save your changes to your JavaScript file.Reload the HTML page in your browser.You should see every age printed, then only the even numbers printed.If not, investigate and fix it.
+//7
+let ages = [45, 34, 12, 89, 47, 71]
+
+//Iterate the array using a while loop, and then print every age in the console.
+let i = 0
+console.log(ages.length)
+while (i < ages.length) {
+	console.log(ages[i])
+	i++
+}
+
+//Add a conditional inside the while loop to only print even numbers.
+let b = 0
+while (b < ages.length) {
+	if (ages[b] % 2 == 0) {
+		console.log("Even: " + ages[b])
+	}
+	b++
+}
+
+//Write another a loop, but use a "for" loop instead of a "while" loop
+
+for (let c = 0; c < ages.length; c++) {
+	if (ages[c] % 2 == 0) {
+		console.log("For Even: " + ages[c])
+	}
 
 }

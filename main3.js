@@ -89,3 +89,17 @@ for (let c = 0; c < ages.length; c++) {
 	}
 
 }
+
+//8
+let myArray = [99, -4, 48, 67, 294, -99, 0, 32, -1]
+
+function lowNum(array) {
+	let myLow = array[0]
+	for (let i = 0; i < array.length; i++) {
+		if (array[i] < myLow) {
+			myLow = array[i]
+		}
+	}
+	return myLow
+}
+console.log(lowNum(myArray))

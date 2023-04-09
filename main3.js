@@ -115,7 +115,7 @@ function highNum(array) {
 console.log(highNum(myArray))
 
 
-//9
+//10
 var numArray = [3, 6, 67, 6, 23, 11, 100, 8, 93, 0, 17, 24, 7, 1, 33, 45, 28, 33, 23, 12, 99, 100]
 var index = 1
 
@@ -128,7 +128,19 @@ function myIndex(array, parameter) {
 		}
 	}
 }
-console.log(myIndex(numArray, 21))
+console.log("Index position: " + myIndex(numArray, 21))
 
 
+//11
 
+var repeatedNum = []
+
+function myRepeat(array) {
+	for (let i = 0; i < array.length; i++) {
+		if (repeatedNum[i] != array[i]) {
+			repeatedNum[i] = array[i]
+			console.log(repeatedNum)
+		}
+	}
+}
+console.log(myRepeat(numArray))

@@ -1,5 +1,5 @@
-//TODO Writing expressions with variables
-console.log("|--> Writing expressions with variables <--|");
+//TODO Writing expressions with letiables
+console.log("|--> Writing expressions with letiables <--|");
 
 //1
 let myName = "Ale";
@@ -116,8 +116,8 @@ console.log(highNum(myArray))
 
 
 //10
-var numArray = [3, 6, 67, 6, 23, 11, 100, 8, 93, 0, 17, 24, 7, 1, 33, 45, 28, 33, 23, 12, 99, 100]
-var index = 1
+let numArray = [3, 6, 67, 6, 23, 11, 100, 8, 93, 0, 17, 24, 7, 1, 33, 45, 28, 33, 23, 12, 99, 100]
+let index = 1
 
 function myIndex(array, parameter) {
 	for (let i = 0; i < array.length; i++) {
@@ -132,15 +132,47 @@ console.log("Index position: " + myIndex(numArray, 21))
 
 
 //11
+// let repeatedNum = []
 
-var repeatedNum = []
+// function myRepeat(array) {
+// 	for (let i = 0; i < array.length; i++) {
+// 		if (repeatedNum[i] != array[i]) {
+// 			repeatedNum[i] = array[i]
+// 			console.log(repeatedNum)
+// 		}
+// 	}
+// }
+// console.log(myRepeat(numArray))
 
-function myRepeat(array) {
+
+//12
+
+let myColor = ["Red", "Green", "White", "Black"];
+let string = ""
+function arrayToString(array) {
 	for (let i = 0; i < array.length; i++) {
-		if (repeatedNum[i] != array[i]) {
-			repeatedNum[i] = array[i]
-			console.log(repeatedNum)
+		if (i !== array.length - 1) {
+			string += "'" + array[i] + "',"
+		} else {
+			string += "'" + array[i] + "'"
 		}
 	}
+	return string
 }
-console.log(myRepeat(numArray))
+console.log(arrayToString(myColor))
+
+
+
+//13
+//Write a JavaScript function that reverses a number. For example, if x = 32443 then the output should be 34423. Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.
+
+
+let x = "32443"
+let newString = "";
+function reverseNumber(parameter) {
+	for (var i = parameter.length - 1; i >= 0; i--) {
+		newString += parameter[i];
+	}
+	return newString;
+}
+console.log(reverseNumber(x))

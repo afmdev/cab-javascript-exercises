@@ -146,7 +146,6 @@ console.log("Index position: " + myIndex(numArray, 21))
 
 
 //12
-
 let myColor = ["Red", "Green", "White", "Black"];
 let string = ""
 function arrayToString(array) {
@@ -164,13 +163,11 @@ console.log(arrayToString(myColor))
 
 
 //13
-//Write a JavaScript function that reverses a number. For example, if x = 32443 then the output should be 34423. Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.
-
-
 let x = "32443"
 let newString = "";
 function reverseNumber(parameter) {
-	for (var i = parameter.length - 1; i >= 0; i--) {
+	console.log(parameter.length)
+	for (let i = parameter.length - 1; i >= 0; i--) {
 		newString += parameter[i];
 	}
 	return newString;

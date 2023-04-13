@@ -1,21 +1,21 @@
 //TODO Writing expressions with letiables
-console.log("|--> Writing expressions with letiables <--|");
+console.log("|--> Writing expressions with letiables <--|")
 
 //1
-let myName = "Ale";
-document.getElementById("myName").innerHTML = myName;
-console.log("Ex 1: " + myName);
+let myName = "Ale"
+document.getElementById("myName").innerHTML = myName
+console.log("Ex 1: " + myName)
 
 //2
-let myAge = 37;
-document.getElementById("myAge").innerHTML = myAge;
+let myAge = 37
+document.getElementById("myAge").innerHTML = myAge
 console.log("Ex 2: " + myAge)
 
 //3
 let juliaAge = 50
 let aleAge = 39
 let ageDiff = juliaAge - aleAge
-document.getElementById("ageDiff").innerHTML = ageDiff;
+document.getElementById("ageDiff").innerHTML = ageDiff
 console.log("Ex3: age diff " + ageDiff)
 
 //4
@@ -54,7 +54,7 @@ document.getElementById("lastElement").innerHTML = "Last element array: " + fami
 
 for (let i = 0; i < family.length; i++) {
 	document.getElementById("loopElements").innerHTML = i + " " + family[i]
-	// document.getElementById("loopElements").innerHTML = family.slice(-1);
+	// document.getElementById("loopElements").innerHTML = family.slice(-1)
 	console.log("6 Loop " + i + ": " + family[i])
 }
 
@@ -146,7 +146,7 @@ console.log("Index position: " + myIndex(numArray, 21))
 
 
 //12
-let myColor = ["Red", "Green", "White", "Black"];
+let myColor = ["Red", "Green", "White", "Black"]
 let string = ""
 function arrayToString(array) {
 	for (let i = 0; i < array.length; i++) {
@@ -164,12 +164,43 @@ console.log(arrayToString(myColor))
 
 //13
 let x = "32443"
-let newString = "";
+let newString = ""
 function reverseNumber(parameter) {
 	console.log(parameter.length)
 	for (let i = parameter.length - 1; i >= 0; i--) {
-		newString += parameter[i];
+		newString += parameter[i]
 	}
-	return newString;
+	return newString
 }
 console.log(reverseNumber(x))
+
+
+//14
+let y = "webmaster"
+function alphabet(parameter) {
+	return parameter.split("").sort().join("")
+}
+console.log(alphabet(y))
+
+//15
+//Write a JavaScript function that converts the first letter of every word to uppercase.For example, if x = "prince of persia" then the output should be "Prince Of Persia".Save your JavaScript file and reload the page.
+
+let prince = "prince of persia"
+let result = ""
+
+function princeUppercase(parameter) {
+	result = parameter.split("")
+	result[0] = parameter[0].toUpperCase()
+	for (let i = 0; i < result.length; i++) {
+		if (result[i] === " ") {
+			result[i + 1] = parameter[i + 1].toUpperCase()
+		}
+	}
+	parameter = result.join("")
+	return parameter
+}
+console.log(princeUppercase(prince))
+
+
+//16
+//Write a JavaScript function that finds the longest word in a phrase. For example, if x = "Web Development Tutorial", then the output should be "Development". Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.

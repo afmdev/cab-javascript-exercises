@@ -186,9 +186,9 @@ console.log(alphabet(y))
 //Write a JavaScript function that converts the first letter of every word to uppercase.For example, if x = "prince of persia" then the output should be "Prince Of Persia".Save your JavaScript file and reload the page.
 
 let prince = "prince of persia"
-let result = ""
 
 function princeUppercase(parameter) {
+	let result = ""
 	result = parameter.split("")
 	result[0] = parameter[0].toUpperCase()
 	for (let i = 0; i < result.length; i++) {
@@ -203,4 +203,23 @@ console.log(princeUppercase(prince))
 
 
 //16
-//Write a JavaScript function that finds the longest word in a phrase. For example, if x = "Web Development Tutorial", then the output should be "Development". Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.
+let longest = "Web Development Tutorial"
+
+function longWord(parameter) {
+	let longestWord = ""
+	let longestArray = parameter.split(" ")
+	for (let i = 0; i < longestArray.length; i++) {
+		if (longestWord.length < longestArray[i].length) {
+			longestWord = longestArray[i]
+		}
+	}
+	return longestWord
+}
+console.log(longWord(longest))
+
+
+
+//17
+//
+
+myBandList()

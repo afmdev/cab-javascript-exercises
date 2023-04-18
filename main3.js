@@ -183,7 +183,6 @@ function alphabet(parameter) {
 console.log(alphabet(y))
 
 //15
-//Write a JavaScript function that converts the first letter of every word to uppercase.For example, if x = "prince of persia" then the output should be "Prince Of Persia".Save your JavaScript file and reload the page.
 
 let prince = "prince of persia"
 
@@ -220,18 +219,6 @@ console.log(longWord(longest))
 
 
 //17
-//Now let's add content to an HTML document instead of writing to the console. Write a function called myBandList() that will list your favorite bands. Start with an empty HTML page that contains a level 1 heading "My Favorite Bands" and an empty unordered list with ID band-list.
-
-// Your function should use the JavaScript DOM to create li elements and add them to the unordered list, with each li element being a string in an array.
-
-// For example, if I call:
-
-// myBandList(['Dire Straits', 'Kansas', 'Steely Dan']);
-
-// The function will add three list items to the unordered list.
-
-
-
 let myBandList = ['Dire Straits', 'Kansas', 'Steely Dan'];
 
 function addBands(array) {
